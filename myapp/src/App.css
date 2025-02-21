@@ -27,7 +27,18 @@
   margin-top: 40px; 
 }
 button:hover {
-  background-color: wheat;
+  background: linear-gradient(45deg, rgb(90, 145, 247), rgb(233, 233, 209));
+}
+
+button:hover{
+  animation: colorChange 2s infinite;
+}
+@keyframes button {
+  0% { background-color: red; }
+  25% { background-color: blue; }
+  50% { background-color: green; }
+  75% { background-color: yellow; }
+  100% { background-color: red; }
 }
 
 
