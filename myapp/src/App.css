@@ -41,6 +41,21 @@ button:hover{
   100% { background-color: red; }
 }
 
+.btn{
+  background-color: rgb(119, 196, 219);
+  padding: 20px 50px;
+  margin: 30px;
+  border-radius: 15px;
+  font-size: larger;
+  font-weight: 900;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-top: 40px; 
+
+}
+.rough{
+font-size: 40px;
+}
+
 
 
 .App-logo {
