@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
     }, [counter, counter2]);
 
     return(
+        //react fragment are used to return multiple elements
         <>
          <h1 className="rough">Counter {counter}</h1>         
       <button className="btn" onClick={() => setCounter(counter + 1)}>+</button>

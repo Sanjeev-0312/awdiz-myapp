@@ -9,6 +9,8 @@ function Home() {
       <button className="button" onClick={() => router("/register")}>Register</button>
       <button className="button" onClick={() => router("/usestate")}>Use State</button>
       <button className="button" onClick={() => router("/useeffects")}>Use Effects</button>
+      <button className="button" onClick={()=>router("/useparams")}>Use Params</button>
+      <button className="button" onClick={()=>router("/paramsproduct")}>ParamsProduct</button>
     </div>
   );
 }
