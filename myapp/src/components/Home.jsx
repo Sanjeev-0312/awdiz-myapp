@@ -11,6 +11,9 @@ function Home() {
       <button className="button" onClick={() => router("/useeffects")}>Use Effects</button>
       <button className="button" onClick={()=>router("/useparams")}>Use Params</button>
       <button className="button" onClick={()=>router("/paramsproduct")}>ParamsProduct</button>
+      <button className="button" onClick={()=>router("/props")}>Props</button>
+      <button className="button" onClick={()=>router("/todo")}>Todo</button>
+
     </div>
   );
 }
