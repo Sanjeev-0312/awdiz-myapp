@@ -7,7 +7,7 @@ const Todo = () =>{
         console.log(event.target.value);
     }
     function aapJamaKaro() {
-        setTodos([...todos, newTodo]);
+        setTodos([...todos, newTodo]);// ... it means spread data .
         setNewTodo("");
     }
     return(
