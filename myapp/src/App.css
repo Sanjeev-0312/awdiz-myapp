@@ -83,7 +83,41 @@ h5{
 .rough{
 font-size: 40px;
 }
+.awdiz{
+  border: 5px solid rgb(233, 228, 228);
+  width: 450px;
+  height: 570px;
+  border-radius: 5px;
+  border-bottom: #c1c4c9;
+  box-sizing: border-box;
+  box-shadow: color-mix(in srgb, rgb(181, 181, 240) 25%, rgb(196, 165, 165) 25%);
+}
 
+.awdiz input{
+  margin-top: 10px;
+  width: 350px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: rgb(207, 191, 159) rgb(144, 144, 207);
+}
+
+.awdiz button{
+  margin: 20px;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px; 
+}
+.awdiz h1{
+  font-family: sans-serif;
+  color: rgb(143, 211, 238);
+}
+.new{
+  background-color: rgb(144, 132, 197);
+  font-size: 20px;
+ 
+  
+}
 
 
 .App-logo {
