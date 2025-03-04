@@ -87,10 +87,10 @@
 
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react-router-dom";  //i can use here from useNavigate 
 
 function Register1() {
-  const router = useNavigate();
+  // const router = useNavigate();
 
   const [allUsers, setAllUsers] = useState([]);
   console.log(allUsers, "allUsers  ");
@@ -136,8 +136,9 @@ function Register1() {
   return (
     <div className="awdiz">
       <h1>Register</h1>
-      <button  onClick={() => router("/login")}>Login</button>
-      <button onClick={() => router("/")}>Home</button>
+      <h1>Users Page</h1>
+      {/* <button  onClick={() => router("/login")}>Login</button>
+      <button onClick={() => router("/")}>Home</button> */}
 
       <form onSubmit={handleSubmit}>
         <label>Name : </label>
@@ -184,9 +185,11 @@ function Register1() {
       {/* {user.email } */}
       {allUsers.map((user, i) => (
         <div className="table">
-          <h4>{i + 1}</h4>
+          <li>{i + 1}</li>
+          <ol>
           <h2>Name : {user.name}</h2>
           <h3>Email : {user.email}</h3>
+          </ol>
         </div>
       ))}
     </div>
