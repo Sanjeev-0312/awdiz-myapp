@@ -11,9 +11,17 @@ import Home from "./components/Home";
 import Props from "./components/23-02/Props";
 import { useState } from "react";
 import Todo from "./components/23-02/Todo";
+<<<<<<< HEAD:myapp/src/App.js
 import MyTodo from "./components/01-03/MyTodo";
 
 
+=======
+import Register1 from "./components/28-02/Register1";
+import Todos from "./components/01-03/Todos";
+import UseMemo from "./components/01-03/UseMemo";
+import UseCallBack from "./components/01-03/UseCallBack";
+import UseRef from "./components/02-03/UseRef";
+>>>>>>> 5c335eb14911153e17b6c6c46355a8b815dc55ad:myapp/src/App.jsx
 function App() {
   const [counter, setCounter]=useState(0);
   console.log("Inside app");
@@ -29,10 +37,20 @@ function App() {
         <Route path="/useparams"element={<UseParams />} />
         <Route path="/paramsproduct/:uniqueid"element={<ParamsProduct />} />
         <Route path="/props" element={<Props counter={counter} setCounter={setCounter} />} />
+<<<<<<< HEAD:myapp/src/App.js
         <Route path="/todo" element={<Todo />} />
         <Route path="/mytodo" element={<MyTodo />} />
   
    
+=======
+        <Route path="/register1"element={<Register1/>}/>
+
+      <Route path="/todo" element={<Todo />} />
+      <Route path="/todos" element={<Todos />} />
+      <Route path="/usememo" element={<UseMemo />} />
+      <Route path="/use-call-back" element={<UseCallBack />} />
+      <Route path="/useref" element={<UseRef />} />
+>>>>>>> 5c335eb14911153e17b6c6c46355a8b815dc55ad:myapp/src/App.jsx
       </Routes>
     </div>
   );
