@@ -10,3 +10,4 @@ function Reducer(state,action){
                 return {}
     }
 }
+export default Reducer;
