@@ -11,6 +11,9 @@ import Home from "./components/Home";
 import Props from "./components/23-02/Props";
 import { useState } from "react";
 import Todo from "./components/23-02/Todo";
+import MyTodo from "./components/01-03/MyTodo";
+
+
 function App() {
   const [counter, setCounter]=useState(0);
   console.log("Inside app");
@@ -26,8 +29,10 @@ function App() {
         <Route path="/useparams"element={<UseParams />} />
         <Route path="/paramsproduct/:uniqueid"element={<ParamsProduct />} />
         <Route path="/props" element={<Props counter={counter} setCounter={setCounter} />} />
-
-      <Route path="/todo" element={<Todo />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/mytodo" element={<MyTodo />} />
+  
+   
       </Routes>
     </div>
   );
