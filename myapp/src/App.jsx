@@ -17,12 +17,14 @@ import UseMemo from "./components/01-03/UseMemo";
 import UseCallBack from "./components/01-03/UseCallBack";
 import UseRef from "./components/02-03/UseRef";
 import UseRef from "./components/02-03/UseReducer";
+import UseReducer from "./components/02-03/UseReducer";
 function App() {
   const [counter, setCounter]=useState(0);
   console.log("Inside app");
   return (
     <div className="App">
       <Routes>
+        
         
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -40,6 +42,7 @@ function App() {
       <Route path="/use-call-back" element={<UseCallBack />} />
       <Route path="/useref" element={<UseRef />} />
       <Route path="/usereducer" element={<UseReducer />} /
+      <Route path="/usereducer" element={<UseReducer />} />
       </Routes>
     </div>
   );

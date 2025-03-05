@@ -1,4 +1,4 @@
-
+import React,{useReducer} from "react";
 function Reducer(state,action){
     console.log(state,"state", action, "action");
     switch(action.type){
@@ -7,7 +7,33 @@ function Reducer(state,action){
         case "DECREMENT_COUNTER":
             return{...state,counter:state.counter-1};
             case "RESET_COUNTER":
-                return {}
+                return {...state, counter: 1};
+                default:
+                    return state;
     }
 }
-export default Reducer;
+const initialState={ counter: 1, counter1: 20};
+const UseReducer =() =>{
+    const[state, dispatch] = useReducer(Reducer,initialState);
+    console.log(state,"state");
+    function Increment(){
+        dispatch({type: "INCREMENT_COUNTER"});
+    }
+    function Decrement(){
+        dispatch({type: "DECREMENT_COUNTER"});
+    }
+    function Reset(){
+        dispatch({type: "RESET_COUNTER"});
+    }
+    return(
+        <div>
+            <h1>Counter : {state.counter}</h1>
+            <button className="btn" onClick={Increment}>+</button>
+            <button className="btn" onClick={Decrement}>-</button>
+            <button className="btn" onClick={Reset}>Reset</button>
+
+        </div>
+    )
+
+}
+export default UseReducer;
