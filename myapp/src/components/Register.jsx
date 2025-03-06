@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { NameCounterContext } from "../context/CounterContext";
 
 function Register() {
+  const { state, dispatch}=useContext(NameCounterContext)
+  console.log(state,"state use from the register");
   const router = useNavigate();
   return (
     <div>

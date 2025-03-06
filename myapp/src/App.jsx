@@ -9,7 +9,7 @@ import ParamsProduct from "./components/22-02/ParamsProduct";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Props from "./components/23-02/Props";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Todo from "./components/23-02/Todo";
 <<<<<<< HEAD:myapp/src/App.js
 import MyTodo from "./components/01-03/MyTodo";
@@ -21,13 +21,23 @@ import Todos from "./components/01-03/Todos";
 import UseMemo from "./components/01-03/UseMemo";
 import UseCallBack from "./components/01-03/UseCallBack";
 import UseRef from "./components/02-03/UseRef";
+<<<<<<< HEAD
 >>>>>>> 5c335eb14911153e17b6c6c46355a8b815dc55ad:myapp/src/App.jsx
+=======
+import UseReducer from "./components/02-03/UseReducer";
+import { NameCounterContext } from "./context/CounterContext";
+import ContextCounter from "./components/04-03/ContextCounter";
+>>>>>>> 7f642267a1ea1ce2a0bcb225ac7d9d0241159b03
 function App() {
   const [counter, setCounter]=useState(0);
+  const {state, dispatch}=useContext(NameCounterContext)
+  console.log(state, "state from the app")
+
   console.log("Inside app");
   return (
     <div className="App">
       <Routes>
+        
         
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -50,7 +60,12 @@ function App() {
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/use-call-back" element={<UseCallBack />} />
       <Route path="/useref" element={<UseRef />} />
+<<<<<<< HEAD
 >>>>>>> 5c335eb14911153e17b6c6c46355a8b815dc55ad:myapp/src/App.jsx
+=======
+      <Route path="/usereducer" element={<UseReducer />} />
+      <Route path="/context-counter" element={<ContextCounter />} />
+>>>>>>> 7f642267a1ea1ce2a0bcb225ac7d9d0241159b03
       </Routes>
     </div>
   );

@@ -16,6 +16,9 @@ function Home() {
       <button className="button" onClick={()=>router("/register1")}>Register1</button>
       <button className="button" onClick={()=>router("/use-call-back")}>UseCallback</button>
       <button className="button" onClick={()=>router("/useref")}>UseRef</button>
+      <button className="button" onClick={()=>router("/usereducer")}>UseReducer</button>
+      <button className="button" onClick={()=>router("/context-counter")}>ContextCounter</button>
+
 
 
     </div>
