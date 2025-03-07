@@ -19,10 +19,11 @@ import UseRef from "./components/02-03/UseRef";
 import UseReducer from "./components/02-03/UseReducer";
 import { NameCounterContext } from "./context/CounterContext";
 import ContextCounter from "./components/04-03/ContextCounter";
+
 function App() {
   const [counter, setCounter]=useState(0);
   const {state, dispatch}=useContext(NameCounterContext)
-  console.log(state, "state from the app")
+  console.log(state, "state from the app", dispatch,"dispatch from the app" )
 
   console.log("Inside app");
   return (
@@ -38,9 +39,9 @@ function App() {
         <Route path="/useparams"element={<UseParams />} />
         <Route path="/paramsproduct/:uniqueid"element={<ParamsProduct />} />
         <Route path="/props" element={<Props counter={counter} setCounter={setCounter} />} />
+        <Route path="/todo" element={<Todo />} />
         <Route path="/register1"element={<Register1/>}/>
-
-      <Route path="/todo" element={<Todo />} />
+        <Route path="/todo" element={<Todo />} />
       <Route path="/todos" element={<Todos />} />
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/use-call-back" element={<UseCallBack />} />
