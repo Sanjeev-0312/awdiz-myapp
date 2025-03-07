@@ -18,6 +18,7 @@ function Home() {
       <button className="button" onClick={()=>router("/useref")}>UseRef</button>
       <button className="button" onClick={()=>router("/usereducer")}>UseReducer</button>
       <button className="button" onClick={()=>router("/context-counter")}>ContextCounter</button>
+      <button className="button" onClick={()=>router("/redux-counter")}>ReduxCounter</button>
 
 
 
