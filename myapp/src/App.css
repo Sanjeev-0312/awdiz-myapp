@@ -141,6 +141,15 @@ font-size: 40px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
 
 .App-link {
   color: #61dafb;

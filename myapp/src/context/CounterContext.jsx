@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 export const NameCounterContext = createContext();
 
 function Reducer(state,action){
@@ -13,14 +13,22 @@ function Reducer(state,action){
        return{...state,theme: "dark"};
        case "LIGHT_THEME":
         return{...state,theme: "light"};
+        case "TOGGLE_THEME":
+         return { ...state, theme: state.theme === "light" ? "dark" : "light" };
      default:
         return state;
     }
 }
-const InitialState={counter: 1, theme: "dark", theme: "light" };
+const InitialState={counter: 1, theme:"light"};
 function CounterContextProvider({children}){
     const[state, dispatch]= useReducer(Reducer, InitialState);
-return  <NameCounterContext.Provider value={{state: state, dispatch: dispatch}}>{children}</NameCounterContext.Provider>;
+
+    useEffect(() => {
+      document.body.className = state.theme;
+    }, [state.theme]);
+  
+
+return  <NameCounterContext.Provider value={{state: state, dispatch: dispatch,}}>{children}</NameCounterContext.Provider>;
 }
 
 export default CounterContextProvider;
