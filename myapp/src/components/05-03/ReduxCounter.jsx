@@ -34,6 +34,15 @@ const ReduxCounter = () => {
           >
             Reset
           </button>
+
+          <h1>Theme Mode:</h1>
+          <button
+            className="btn"
+            aria-label="Theme value"
+            onClick={() => dispatch(theme())}
+          >
+            theme
+          </button>
         </div>
       </div>
     </div>
