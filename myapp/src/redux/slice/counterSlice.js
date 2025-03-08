@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { toggleTheme } from './themeSlice'
 
 const initialState = {
   value: 0,
@@ -21,6 +22,9 @@ export const counterSlice = createSlice({
     reset: (state) => {
       state.value = 1;
     },
+    toggleTheme: (state) => {
+      state.value = theme;
+    },
 
     incrementByAmount: (state, action) => {
       state.value += action.payload
@@ -29,6 +33,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement,reset, incrementByAmount } = counterSlice.actions
+export const { increment, decrement,reset,theme, incrementByAmount } = counterSlice.actions
 
 export default counterSlice.reducer
