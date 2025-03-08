@@ -1,17 +1,27 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment,reset,theme } from "../../redux/slice/counterSlice";
+import { decrement, increment, reset } from "../../redux/slice/counterSlice";
+import { toggleTheme } from "../../redux/slice/themeSlice";
 
 const ReduxCounter = () => {
   const count = useSelector((state) => state.counter.value);
-
+  const darkMode = useSelector((state) => state.theme.darkMode);
   const dispatch = useDispatch();
+
   return (
-    <div>
+    <div
+      style={{
+        background: darkMode ? "#333" : "#fff",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       <div>
-        <h1>Counter:</h1>
-      <h3 style={{color:"white",fontSize:"25px"}}>{count}</h3>
-        <div > 
+        <h1 style={{
+          color: darkMode ? "white":"black",
+        }}>Counter:</h1>
+        <h3 style={{  color: darkMode ? "white":"black", fontSize: "25px" }}>{count}</h3>
+        <div>
           <button
             className="btn"
             aria-label="Increment value"
@@ -19,7 +29,7 @@ const ReduxCounter = () => {
           >
             Increment
           </button>
-         
+
           <button
             className="btn"
             aria-label="Decrement value"
@@ -34,7 +44,17 @@ const ReduxCounter = () => {
           >
             Reset
           </button>
+          
         </div>
+        <button className="btn" onClick={() => dispatch(toggleTheme())}>
+        {darkMode ? ' Light Mode' : ' Dark Mode'}
+      </button>
+        {/* <button
+          className="btn"
+          onClick={() => dispatch(toggleTheme())}
+        >
+          {darkMode ? "Light Theme" : "Dark Theme"}
+        </button> */}
         <div style={{ 
       background: darkMode ? '#333' : '#fff', 
       color: darkMode ? '#fff' : '#000', 
@@ -43,9 +63,7 @@ const ReduxCounter = () => {
       justifyContent: 'center', 
       alignItems: 'center' 
     }}>
-      <button onClick={() => dispatch(toggleTheme())}>
-        {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-      </button>
+      
     </div>
       </div>
     </div>
