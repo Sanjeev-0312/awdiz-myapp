@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { toggleTheme } from './themeSlice'
 
 const initialState = {
   value: 0,
@@ -18,6 +19,13 @@ export const counterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1
     },
+    reset: (state) => {
+      state.value = 1;
+    },
+    toggleTheme: (state) => {
+      state.value = theme;
+    },
+
     incrementByAmount: (state, action) => {
       state.value += action.payload
     },
