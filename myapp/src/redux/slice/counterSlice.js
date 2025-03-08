@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { toggleTheme } from './themeSlice'
 
 const initialState = {
   value: 0,

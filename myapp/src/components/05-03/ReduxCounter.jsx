@@ -11,7 +11,7 @@ const ReduxCounter = () => {
       <div>
         <h1>Counter:</h1>
       <h3 style={{color:"white",fontSize:"25px"}}>{count}</h3>
-        <div> 
+        <div > 
           <button
             className="btn"
             aria-label="Increment value"
@@ -34,16 +34,19 @@ const ReduxCounter = () => {
           >
             Reset
           </button>
-
-          <h1>Theme Mode:</h1>
-          <button
-            className="btn"
-            aria-label="Theme value"
-            onClick={() => dispatch(theme())}
-          >
-            theme
-          </button>
         </div>
+        <div style={{ 
+      background: darkMode ? '#333' : '#fff', 
+      color: darkMode ? '#fff' : '#000', 
+      height: '100vh', 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center' 
+    }}>
+      <button onClick={() => dispatch(toggleTheme())}>
+        {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
+    </div>
       </div>
     </div>
   );
