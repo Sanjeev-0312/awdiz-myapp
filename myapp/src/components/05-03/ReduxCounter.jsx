@@ -25,6 +25,13 @@ const ReduxCounter = () => {
           >
             Decrement
           </button>
+          <button
+            className="btn"
+            aria-label="Reset value"
+            onClick={() => dispatch(reset())}
+          >
+            Reset
+          </button>
         </div>
       </div>
     </div>
