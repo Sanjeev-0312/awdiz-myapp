@@ -20,6 +20,7 @@ import UseReducer from "./components/02-03/UseReducer";
 import { NameCounterContext } from "./context/CounterContext";
 import ContextCounter from "./components/04-03/ContextCounter";
 import ReduxCounter from './components/05-03/ReduxCounter'
+import AllProducts from "./components/08-03/AllProducts";
   
 function App() {
   const [counter, setCounter]=useState(0);
@@ -48,6 +49,7 @@ function App() {
       <Route path="/usereducer" element={<UseReducer />} />
       <Route path="/context-counter" element={<ContextCounter />} />
       <Route path="/redux-counter" element={<ReduxCounter />} />
+      <Route path="/allproducts" element={<AllProducts />} />
       
       </Routes>
     </div>
