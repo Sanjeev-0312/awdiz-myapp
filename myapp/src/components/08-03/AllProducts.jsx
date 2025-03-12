@@ -22,12 +22,38 @@ const AllProducts = () => {
         getAllProducts();
     },[token]);
     return (
-        <div>All Products
+        <div>
+            <h1>All Products</h1>
           <div style={{
             display:"flex",
             justifyContent:"space-around",
             flexWrap:"wrap",
-          }} >
+          }} 
+          >
+            {allProducts?.lenght> 0 ?(
+                allProducts.map((product) => (
+                    <div
+                    style={{
+                        width: "18%",
+                        height:"400px",
+                        border:" 1px solid black",
+                        borderRadius: "10px",
+                        marginBottom: "20px",
+                        cursor:"pointer",
+                    }}
+                    key={product.id}
+                    onClick={()=> router(`/single-product/${product.id}`)}
+                    >
+                        <img 
+                         src = {product.image}
+                         style={{height:"60%", width:"100%", borderRadius:"10px"}}/>
+                         <h2>{product.title} </h2>
+              <h5>${product.price}/- </h5>
+            </div>
+                ))
+            ):(
+                <h1> Loading...</h1>
+            )}
 
           </div>
         </div>
