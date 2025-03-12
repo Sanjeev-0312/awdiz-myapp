@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
+import axios from 'axios';
 const AllProducts = () => {  
     const [allProducts, setAllProducts] = useState([]);
     const router = useNavigate();
@@ -8,7 +9,7 @@ const AllProducts = () => {
 
     const getAllProducts = async() =>{
         try{
-            const response =await axions.get("https://fakestoresapi.com/products");
+            const response =await axios.get("https://fakestoresapi.com/products",);
             console.log(response.data, "response");
             setAllProducts(response.data);
         }catch(error){
@@ -16,7 +17,7 @@ const AllProducts = () => {
         }
     };
     useEffect (() => {
-        if(token == null){
+        if(token === null){
             router ("/fake-login");
         }
         getAllProducts();
