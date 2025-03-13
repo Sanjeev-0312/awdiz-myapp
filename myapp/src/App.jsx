@@ -22,6 +22,7 @@ import ContextCounter from "./components/04-03/ContextCounter";
 import ReduxCounter from './components/05-03/ReduxCounter'
 import AllProducts from "./components/08-03/AllProducts";
 import FakeLogin from "./components/08-03/FakeLogin";
+import SingleProduct from "./components/08-03/SingleProduct";
   
 function App() {
   const [counter, setCounter]=useState(0);
@@ -52,6 +53,7 @@ function App() {
       <Route path="/redux-counter" element={<ReduxCounter />} />
       <Route path="/allproducts" element={<AllProducts />} />
       <Route path="/fakelogin" element={<FakeLogin />} />
+      <Route path="/single-product/:id" element={<SingleProduct />} />
       </Routes>
     </div>
   );

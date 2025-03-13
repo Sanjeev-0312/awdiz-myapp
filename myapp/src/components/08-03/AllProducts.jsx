@@ -9,7 +9,7 @@ const AllProducts = () => {
 
     const getAllProducts = async() =>{
         try{
-            const response =await axios.get("https://fakestoresapi.com/products",);
+            const response =await axios.get("https://fakestoreapi.com/products");
             console.log(response.data, "response");
             setAllProducts(response.data);
         }catch(error){
@@ -18,20 +18,23 @@ const AllProducts = () => {
     };
     useEffect (() => {
         if(token === null){
-            router ("/fake-login");
+            router ("/fakelogin");
         }
         getAllProducts();
     },[token]);
     return (
-        <div>
-            <h1>All Products</h1>
+        <div style={{width:"100%", minHeight : "100vh"}}>
+            <h1 style={{marginBottom:"50px", color:"white", fontFamily:"sans-sarif"}}>All Products</h1>
           <div style={{
+            width:"100%",
+            height:"100%",
+            paddingTop : "100px",
             display:"flex",
             justifyContent:"space-around",
             flexWrap:"wrap",
           }} 
           >
-            {allProducts?.lenght> 0 ?(
+            {allProducts.length> 0 ?(
                 allProducts.map((product) => (
                     <div
                     style={{

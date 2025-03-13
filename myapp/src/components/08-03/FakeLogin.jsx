@@ -99,7 +99,7 @@ const FakeLogin = () => {
         const token = "sdfghjkqawdag123456hgvfes";
         setCounter(1);
         dispatch(login(token));
-        router("/all-products");
+        router("/allproducts");
       } else {
         setCounter(counter + 1);
         alert(error?.response?.data);
