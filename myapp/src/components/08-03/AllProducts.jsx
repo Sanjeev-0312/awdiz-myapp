@@ -23,11 +23,11 @@ const AllProducts = () => {
         getAllProducts();
     },[token]);
     return (
-        <div style={{width:"100%", minHeight : "100vh"}}>
-            <h1 style={{marginBottom:"50px", color:"white", fontFamily:"sans-sarif"}}>All Products</h1>
+        <div style={{ width:"100%", minHeight : "100vh", backgroundColor:"black"}}>
+            <h1 style={{marginBottom:"50px", color:"white", fontFamily:"sans-sarif",border:"1px solid white",width:"170px",textAlign:"center",margin:"auto"}}>All Products</h1>
           <div style={{
             width:"100%",
-            height:"100%",
+            height:"100%",  
             paddingTop : "100px",
             display:"flex",
             justifyContent:"space-around",
@@ -38,9 +38,9 @@ const AllProducts = () => {
                 allProducts.map((product) => (
                     <div
                     style={{
-                        width: "18%",
-                        height:"400px",
-                        border:" 1px solid black",
+                        width: "22%",
+                        height:"450px",
+                        border:" 1px solid white",
                         borderRadius: "10px",
                         marginBottom: "20px",
                         cursor:"pointer",
@@ -48,10 +48,10 @@ const AllProducts = () => {
                     key={product.id}
                     onClick={()=> router(`/single-product/${product.id}`)}
                     >
-                        <img 
+                        <img   
                          src = {product.image}
-                         style={{height:"60%", width:"100%", borderRadius:"10px"}}/>
-                         <h2>{product.title} </h2>
+                         style={{height:"50%",  width:"90%", borderRadius:"10px", marginTop:"5px",color:"grey"}}/>
+                         <h2  style={{color:"grey"}}>{product.title} </h2>
               <h5>${product.price}/- </h5>
             </div>
                 ))
