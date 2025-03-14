@@ -33,13 +33,13 @@ const SingleProduct = () => {
       return (
         <div > <h1 style={{marginBottom:"50px", color:"white", fontFamily:"sans-sarif"}}>Single Product Page </h1>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <div style={{ border: "1px solid black", width: "47%", height: "450px", borderRadius:"20px"}}>
+          <div style={{ border: "1px solid black", width: "30%", height: "450px", borderRadius:"20px"}}>
             <img
               src={singleProducts.image}
               style={{
-                width: "90%",
+                width: "80%",
                 margin: "auto",
-                height: "90%",
+                height: "80%",
                 marginTop: "5%",
               }}
             />

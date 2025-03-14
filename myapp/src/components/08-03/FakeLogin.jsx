@@ -119,16 +119,16 @@ const FakeLogin = () => {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <p>Note : Please try username and password twice.</p>
+        <p> You can enter your username and password.</p>
         <label>Username</label>
         <br />
-        <input onChange={handleChange} type="text" name="username" />
+        <input className="input" onChange={handleChange} type="text" name="username" />
         <br />
         <label>Password</label>
         <br />
-        <input onChange={handleChange} type="password" name="password" />
+        <input className="input" onChange={handleChange} type="password" name="password" />
         <br />
-        <input type="submit" />
+        <input className="btn" type="submit" />
       </form>
     </div>
   );
