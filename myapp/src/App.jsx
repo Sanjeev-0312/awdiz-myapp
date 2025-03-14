@@ -44,10 +44,11 @@ function App() {
     }
   }, []);
   return (
+    <div className="nav"><NavBar/>
     <div className="App">
-      <NavBar/>
+    
       <Routes>
-        
+      
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -70,6 +71,7 @@ function App() {
       <Route path="/fakelogin" element={<FakeLogin />} />
       <Route path="/single-product/:id" element={<SingleProduct />} />
       </Routes>
+    </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const NavBar = () => {
         Home
       </h1>
       <h1 onClick={() => router("/allproducts")} style={{ cursor: "pointer" }}>
-        Products
+        AllProducts
       </h1>
       {!tokenInRedux ? (
         <h1 onClick={() => router("/fakelogin")} style={{ cursor: "pointer" }}>

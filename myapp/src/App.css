@@ -10,6 +10,10 @@
   background-color:rgb(124, 124, 143);
 
 }
+.nav{
+  background-color: #000000;
+  color: aliceblue;
+}
 .head{
   font-size: 120px;
   font-family: 'Times New Roman', Times, serif;
@@ -162,4 +166,15 @@ body.dark {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media  screen and (max-width:400px) {
+  .nav{
+    display: none;
+    
+  }
+  .app{
+    display: contents;
+  }
+  
 }
