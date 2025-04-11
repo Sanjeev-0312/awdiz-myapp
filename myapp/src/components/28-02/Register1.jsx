@@ -40,8 +40,8 @@ function Register1() {
           {
             userData,
           }
-        );
-        console.log(response,"response");
+        );  
+        console.log(response,"response from registration api");
         
         setAllUsers([...allUsers, userData]);
         setUserData({
@@ -110,16 +110,16 @@ function Register1() {
       </form>
 
       <h1 className="table">All Users</h1>
-      {/* {user.email } */}
+      {/* {user.email }
       {allUsers.map((user, i) => (
-        <div className="table">
+        <div className="table" key="i">
           <li>{i + 1}</li>
           <ol>
           <h2>Name : {user.name}</h2>
           <h3>Email : {user.email}</h3>
           </ol>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
