@@ -22,45 +22,46 @@ function Register1() {
     setUserData({ ...userData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
 
-     try{
-
-    if (
-      userData.name &&
-      userData.email &&
-      userData.password &&
-      userData.confirmPassword
-    ) {
-      if (userData.password === userData.confirmPassword) {
-
-        const response = await axios.post(
-          "http://localhost:8000/api/v1/auth/register",
-          {
-            userData,
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      try {
+  
+        if (
+          userData.name &&
+          userData.email &&
+          userData.password &&
+          userData.confirmPassword
+        ) {
+          if (userData.password === userData.confirmPassword) {
+  
+            const response = await axios.post(
+              "http://localhost:8000/api/v1/auth/register",
+              {
+                userData,
+              }
+            );
+            console.log(response, "response from registration api");
+  
+            setUserData({
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: "",
+            });
+            setAllUsers([...allUsers, userData]);
+          } else {
+            alert("Password not amtched.");
           }
-        );  
-        console.log(response,"response from registration api");
-        
-        setAllUsers([...allUsers, userData]);
-        setUserData({
-          name: "",
-          email: "",
-          password: "",
-          confirmPassword: "",
-        });
-      } else {
-        alert("Password not amtched.");
+        } else {
+          alert("All fields are required.");
+        }
+      } catch (error) {
+        console.log(error, "error while submiting register.");
       }
-    } else {
-      alert("All fields are required.");
-    } 
-    }catch(error){
-      console.log(error,"error while submiting register.");
-    }
-  };
-
+    };
+  
   return (
     <div className="awdiz">
       <h1>Register</h1>
@@ -105,7 +106,7 @@ function Register1() {
           name="confirmPassword"
         />
         <br />
-          <button className="new">Submit</button>
+        <button className="new" >Submit</button>
         <br />
       </form>
 
