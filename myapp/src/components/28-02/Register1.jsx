@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import React from "react-router-dom";  //i can use here from useNavigate 
+import toast from "react-hot-toast";
+import React, { Router } from "react-router-dom";  //i can use here from useNavigate 
 
 function Register1() {
   // const router = useNavigate();
@@ -42,20 +43,26 @@ function Register1() {
                 userData,
               }
             );
+            if(response.data.success === true){
+              toast.success(response.data.message);
+            }else{
+              toast.error(response.data.message);
+            }
             console.log(response, "response from registration api");
-  
+            setAllUsers([...allUsers, userData]);
             setUserData({
               name: "",
               email: "",
               password: "",
               confirmPassword: "",
             });
-            setAllUsers([...allUsers, userData]);
+            Router("/login")
+          
           } else {
-            alert("Password not amtched.");
+            toast.error("Password not amtched.");
           }
         } else {
-          alert("All fields are required.");
+          toast.error("All fields are required.");
         }
       } catch (error) {
         console.log(error, "error while submiting register.");
