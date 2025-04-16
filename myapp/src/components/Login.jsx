@@ -7,8 +7,20 @@ function Login() {
     <div>
       <h1 className="head">Login</h1>
       <button className="button" onClick={() => router("/register")}>Register</button>
-      <button className="button" onClick={() => router("/")}>Home</button>
-      <button className="button" onClick={() => router("/allproducts")}>All Products</button>
+      <form > 
+        <label >
+          Email : 
+        </label>
+        <br />
+        <input type="email" />
+        <br />
+        <label>Password :</label>
+        <br />
+        <input type="password" />
+        <br />
+        <input type="submit" />
+        <br />
+      </form>
     </div>
   );
 }
