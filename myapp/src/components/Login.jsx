@@ -8,21 +8,25 @@ function Login() {
   const handleChange = (e) => {
     setUserData({...userData, [e.target.name]: e.target.value});
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userData)  
+  }
 
   return (
     <div>
       <h1 className="head">Login</h1>
       <button className="button" onClick={() => router("/register")}>Register</button>
       <form > 
-        <label >
+        <label onSubmit={handleSubmit}>
           Email : 
         </label>
         <br />
-        <input type="email" name="email" />
+        <input onChange={handleChange} required type="email" name="email" />
         <br />
         <label>Password :</label>
         <br />
-        <input type="password" name="password" />
+        <input onChange={handleChange} required type="password" name="password" />
         <br />
         <input type="submit" />
         <br />
