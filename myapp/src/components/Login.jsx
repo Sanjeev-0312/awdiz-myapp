@@ -44,14 +44,14 @@ function Login() {
 
       <h1 className="head">Login</h1>
 
-      <button className="button" onClick={() => router("/register")}>
+      <button className="button" onClick={() => router("/register1")}>
         Register
       </button>
 
       <form onSubmit={handleSubmit}>
         <label>Email:</label>
         <br />
-        <input
+        <input className="input"
           value={userData.email}
           onChange={handleChange}
           required
@@ -61,7 +61,7 @@ function Login() {
         <br />
         <label>Password:</label>
         <br />
-        <input
+        <input className="input"
           value={userData.password}
           onChange={handleChange}
           required
@@ -69,10 +69,14 @@ function Login() {
           name="password"
         />
         <br />
-        <button type="submit">Login</button>
+        <br />
+        <button className="btn" type="submit">Login</button>
       </form>
     </div>
   );
 }
+
+
+
 
 export default Login;
