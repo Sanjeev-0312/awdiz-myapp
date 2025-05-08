@@ -29,10 +29,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 
 
-const socket = io("http://localhost:8000", {
+const socket = io("http://localhost:8000" , {
   withCredentials: true
 });
-  
+  //https://awdiz-myapp-sanjeev-chauhans-projects.vercel.app/   {}
 function App() {
   const dispatch = useDispatch();
   const tokenFromRedux = useSelector((state) => state.user.token);

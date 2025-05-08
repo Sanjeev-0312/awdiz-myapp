@@ -73,8 +73,8 @@ function Register1() {
     <div className="awdiz">
       <h1>Register</h1>
       <h1>Users Page</h1>
-      {/* <button  onClick={() => router("/login")}>Login</button>
-      <button onClick={() => router("/")}>Home</button> */}
+      {/* <button  onClick={() => Router("/login")}>Login</button>
+      <button onClick={() => Router("/")}>Home</button> */}
 
       <form onSubmit={handleSubmit}>
         <label>Name : </label>
